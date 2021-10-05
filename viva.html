@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Random Password Generator</title>
+<link rel='stylesheet'
+href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-aweso
+me.min.css'>
+<link rel='stylesheet'
+href='https://fonts.googleapis.com/css?family=Kanit:300,500,700'>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+<div class="title-section">
+<h1 class="title">Password Generator</h1>
+</div>
+<div class="inner-section">
+<div class="password-section">
+<div class="pass-field" id="pass-field">
+----
+<!-- </div>
+<button id="copy" class="copy">Copy</button>
+<div class="alert" id="alert"><span class="message"
+id="message"></div>
+</div> -->
+<p class="info">Select your options and click the "Generate" button.
+Then your password will appear above.</p>
+<div class="controls">
+<div class="length" id="length-box" >
+<label for="length">Password Length</label>
+<input type="number" id='length' min="8" max="64" list="ranges">
+</div>
+<div class="control">
+<input type="checkbox" id="lowercase">
+<label class="check-label" for="lowercase"><span
+class="checkbox">Use Lowercase Characters</span></label>
+</div>
+<div class="control">
+<input type="checkbox" id="uppercase">
+<label class="check-label" for="uppercase"><span
+class="checkbox">Use Uppercase Characters</span></label>
+</div>
+<div class="control">
+<input type="checkbox" id="numbers">
+<label class="check-label" for="numbers"><span
+class="checkbox">Use Numbers</span></label>
+</div>
+<div class="control" id="punctuation">
+<label for="length">special Characters</label>
+<input type="number" id='punctuationn' min="1"
+max="lengthInput.value/4" list="ranges">
+</div>
+<button class="generate" id="generate">Generate!</button>
+</div>
+</div>
+</div>
+<script src='https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js'>
+</script>
+<script src="scripting.js"></script>
+</body>
+</html>

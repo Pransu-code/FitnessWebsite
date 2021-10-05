@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Password Generator with JavaScript</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+  background-color: #9dc5bb;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/password.png);
+}
+
+.container {
+  padding: 1rem 1.5rem;
+  border: 1px solid tomato;
+  width: 350px;
+  background-color: #bcf4f5;
+  background-color: transparent;
+}
+
+h2 {
+  text-align: center;
+  padding: 15px 0;
+  color: tomato;
+}
+
+/* input[type='checkbox'] {
+  margin-right: 0;
+} */
+/* input[type='text'] {
+  height: 100%;
+  width: 100%;
+} */
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  color: whitesmoke;
+}
+.result__container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid tomato;
+  padding: 0 5px;
+  color: whitesmoke;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result__container #copy {
+  height: 40px;
+  width: 40px;
+  background-color: #5bc0be;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.result__container #copy:hover {
+  background-color: tomato;
+  color: #ffffff;
+}
+
+#generate {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: #0b132b;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+#generate:hover {
+  background-color: #5bc0be;
+  color: #ffffff;
+}
+
+    </style>
+</head>
+
+<body>
+
+ 
+<div class="wrapper">
+    <div class="title-section">
+      <h1 class="title">Password Generator</h1>
+    </div>
+    <div class="inner-section">
+      <div class="password-section">
+      <div class="pass-field" id="pass-field">
+      ----
+    <!-- </div>
+      <button id="copy" class="copy">Copy</button>
+      <div class="alert" id="alert"><span class="message" id="message"></div>
+    </div> -->
+    <p class="info">Select your options and click the "Generate" button. Then your password will appear above.</p>
+    <div class="controls">
+      <div class="length" id="length-box" >
+        <label for="length">Password Length</label>
+        <input type="number" id='length' min="8" max="64" list="ranges">
+      </div>
+      <div class="control">
+        <input type="checkbox" id="lowercase">
+        <label class="check-label" for="lowercase"><span class="checkbox">Use Lowercase Characters</span></label>
+      </div>
+      <div class="control">
+        <input type="checkbox" id="uppercase">
+        <label class="check-label" for="uppercase"><span class="checkbox">Use Uppercase Characters</span></label>
+      </div>
+      <div class="control">
+        <input type="checkbox" id="numbers">
+        <label class="check-label" for="numbers"><span class="checkbox">Use Numbers</span></label>
+      </div>
+      <div class="control" id="punctuation">
+        <label for="length">special Characters</label>
+        <input type="number" id='punctuationn' min="1" max="lengthInput.value/4" list="ranges">
+      </div>
+  
+      <button class="generate" id="generate">Generate!</button>
+    </div>
+    </div>
+  </div>
+         
+  
+
+</body>
+
+</html>
